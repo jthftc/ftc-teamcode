@@ -12,7 +12,39 @@ Next, your going to need to either setup an [OnBotJava](https://github.com/FIRST
 
 ## Developing an OpMode:
 
+### Basic Template
 
+To begin creating your first java program, open up your /teamcode folder within your [FTC SDK](https://github.com/FIRST-Tech-Challenge/FtcRobotController) and create a new file named ```main.java```. Next copy and paste the following template into this new java file: 
+
+
+
+```java
+package org.firstinspires.ftc.teamcode; //This may change depending on where this file is stored
+
+import com.qualcomm.robotcore.eventloop.opmode.OpMode;
+import com.qualcomm.robotcore.eventloop.opmode.TeleOp; 
+import com.qualcomm.robotcore.hardware.DcMotor; //Needed for Motor Control
+import com.qualcomm.robotcore.hardware.DcMotorEx; //Needed for Motor Control
+import com.qualcomm.robotcore.hardware.Servo; //Needed for Servo Control
+import com.qualcomm.robotcore.util.ElapsedTime;
+
+@TeleOp(name="main", group="Opmode") //Name & group of OpMode within the Driver Station Phone
+@Disabled //Remove when finished and ready for testing
+
+public class main extends OpMode {
+
+    @Override
+    public void init() {
+      //Initialization Code
+    }
+    
+    @Override
+    public void loop() {
+      //Loop Code
+    }
+
+}
+```
 
 
 --- 
