@@ -13,6 +13,10 @@ Next, your going to need to either setup an [OnBotJava](https://github.com/FIRST
 ## Developing an OpMode:
 
 
+
+
+--- 
+
 ### Connect with us:
 
 [<img align="left" alt="javathehutts.org" width="22px" src="https://raw.githubusercontent.com/iconic/open-iconic/master/svg/globe.svg" />][website]
@@ -25,16 +29,6 @@ Next, your going to need to either setup an [OnBotJava](https://github.com/FIRST
 <br />
 
 
---- 
-### Team Members:
-
-<img align="left" src="http://javathehutts.org/wp-content/uploads/2020/07/IMG_7114-scaled-1cayden.jpg" height="auto" width="50" style="border-radius:50%">
-<img align="left" src="http://javathehutts.org/wp-content/uploads/2020/07/IMG_7122-scalednick.jpg" height="auto" width="50" style="border-radius:50%">
-<img align="left" src="http://javathehutts.org/wp-content/uploads/2020/07/IMG_7116-scaledaum.jpg" height="auto" width="50" style="border-radius:50%">
-<img align="left" src="http://javathehutts.org/wp-content/uploads/2020/07/IMG_7120-scaled-1will.jpg" height="auto" width="50" style="border-radius:50%">
-
-<br/>
-<br/>
 
 ---
 
