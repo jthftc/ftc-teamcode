@@ -14,9 +14,7 @@ Next, your going to need to either setup an [OnBotJava](https://github.com/FIRST
 
 ### Basic Template
 
-To begin creating your first java program, open up your /teamcode folder within your [FTC SDK](https://github.com/FIRST-Tech-Challenge/FtcRobotController) and create a new file named ```main.java```. Next copy and paste the following template into this new java file: 
-
-
+To begin creating your first java program, open up your /teamcode folder within your [FTC SDK](https://github.com/FIRST-Tech-Challenge/FtcRobotController) and create a new file named ```main.java```. Next copy and paste the following template into this new java file. This template includes basic imports, class syntax, and the ```init()```/```loop()``` in which will help define our robot objectives during the TeleOp period.
 
 ```java
 package org.firstinspires.ftc.teamcode; //This may change depending on where this file is stored
@@ -45,6 +43,23 @@ public class main extends OpMode {
 
 }
 ```
+### Initializing Motors
+
+
+### Controlling Motors
+
+
+### Initializing Servos
+
+
+### Controlling Servos
+
+
+### Exporting OpMode
+
+
+### Adjusting OpMode Based Upon Drivetrain
+
 
 
 --- 
