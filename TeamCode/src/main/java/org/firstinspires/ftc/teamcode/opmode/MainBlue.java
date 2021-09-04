@@ -3,10 +3,6 @@ package org.firstinspires.ftc.teamcode.opmode;
 import com.acmerobotics.roadrunner.control.PIDFController;
 import com.acmerobotics.roadrunner.geometry.Pose2d;
 import com.acmerobotics.roadrunner.geometry.Vector2d;
-import com.acmerobotics.roadrunner.trajectory.Trajectory;
-import com.acmerobotics.roadrunner.trajectory.constraints.AngularVelocityConstraint;
-import com.acmerobotics.roadrunner.trajectory.constraints.MecanumVelocityConstraint;
-import com.acmerobotics.roadrunner.trajectory.constraints.MinVelocityConstraint;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
@@ -21,12 +17,9 @@ import org.firstinspires.ftc.robotcore.external.navigation.VuforiaLocalizer;
 import org.firstinspires.ftc.robotcore.external.navigation.VuforiaTrackable;
 import org.firstinspires.ftc.robotcore.external.navigation.VuforiaTrackableDefaultListener;
 import org.firstinspires.ftc.robotcore.external.navigation.VuforiaTrackables;
-import org.firstinspires.ftc.teamcode.drive.DriveConstants;
 import org.firstinspires.ftc.teamcode.drive.SampleMecanumDrive;
-import org.firstinspires.ftc.teamcode.storage.OpStorage;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import static org.firstinspires.ftc.robotcore.external.navigation.AngleUnit.DEGREES;
@@ -39,9 +32,9 @@ import static org.firstinspires.ftc.teamcode.drive.SampleMecanumDrive.setShooter
 import static org.firstinspires.ftc.teamcode.drive.SampleMecanumDrive.threadState;
 
 
-@TeleOp(name="Main", group = "Iterative Opmode")
+@TeleOp(name="MainBlue", group = "Iterative Opmode")
 
-public class Main extends LinearOpMode {
+public class MainBlue extends LinearOpMode {
 
     private double multiplier = 1;
     private double turnMultiplier = 0.8;
@@ -71,7 +64,7 @@ public class Main extends LinearOpMode {
 
     private Vector2d targetPosition = new Vector2d(0, 0);
 
-    private Pose2d startPose = new Pose2d(0, 0, Math.toRadians(-90));
+    private Pose2d startPose = new Pose2d(0, 0, Math.toRadians(90));
 
     private PIDFController headingController = new PIDFController(SampleMecanumDrive.HEADING_PID);
 
@@ -372,7 +365,7 @@ public class Main extends LinearOpMode {
                             drive.setShooterPower(-0.9);
                             VectorF translation = lastLocation.getTranslation();
                             double error = Math.toDegrees(Math.asin((translation.get(0) / mmPerInch)/(translation.get(2) / mmPerInch)));
-                            Pose2d poseReset = new Pose2d(poseEstimate.getX(), poseEstimate.getY(), Math.toRadians(-90 + error));
+                            Pose2d poseReset = new Pose2d(poseEstimate.getX(), poseEstimate.getY(), Math.toRadians(90 + error));
                             drive.setPoseEstimate(poseReset);
                             drive.turn(Math.toRadians(180 - error),Math.toRadians(360),Math.toRadians(270));
                             while (drive.isBusy()) {}
@@ -402,7 +395,7 @@ public class Main extends LinearOpMode {
                             VectorF translation = lastLocation.getTranslation();
                             double error = Math.toDegrees(Math.asin((translation.get(0) / mmPerInch)/(translation.get(2) / mmPerInch)));
                             double angularError = 14 - error;
-                            Pose2d poseReset = new Pose2d(poseEstimate.getX(), poseEstimate.getY(), Math.toRadians(-90 + error));
+                            Pose2d poseReset = new Pose2d(poseEstimate.getX(), poseEstimate.getY(), Math.toRadians(90 + error));
                             drive.setPoseEstimate(poseReset);
                             drive.turn(Math.toRadians(180 + angularError));
                             while (drive.isBusy()) {}

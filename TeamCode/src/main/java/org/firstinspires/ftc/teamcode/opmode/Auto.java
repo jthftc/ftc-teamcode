@@ -75,7 +75,6 @@ public class Auto extends LinearOpMode {
                 int targetZoneY = 0;
                 int targetZoneAngle = 0;
 
-
                 timerA.reset();
 
                 int isSensed = 0;
@@ -196,11 +195,6 @@ public class Auto extends LinearOpMode {
                 drive.turn(Math.toRadians(-90));
 
                 drive.setPoseEstimate(new Pose2d(-5,-45,Math.toRadians(180)));
-
-
-
-
-
 
                 externalThread.start();
 

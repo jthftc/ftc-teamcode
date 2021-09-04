@@ -289,10 +289,17 @@ public class ConceptVuforiaUltimateGoalNavigationSample extends LinearOpMode {
                 telemetry.addData("Pos (in)", "{X, Y, Z} = %.1f, %.1f, %.1f",
                         translation.get(0) / mmPerInch, translation.get(1) / mmPerInch, translation.get(2) / mmPerInch);
 
-                telemetry.addData("Angle off", Math.toDegrees(Math.asin((translation.get(0) / mmPerInch)/(translation.get(2) / mmPerInch))));
+                telemetry.addData("Angle off conventional error", Math.toDegrees(Math.asin((translation.get(0) / mmPerInch)/(translation.get(2) / mmPerInch))));
+
+                double error = Math.toDegrees(Math.asin((translation.get(0) / mmPerInch)/(translation.get(2) / mmPerInch)));
 
                 // express the rotation of the robot in degrees.
                 Orientation rotation = Orientation.getOrientation(lastLocation, EXTRINSIC, XYZ, DEGREES);
+
+                telemetry.addData("Angle off from picture", Math.toDegrees(Math.acos(63/(translation.get(2)/ mmPerInch))) );
+
+                telemetry.addData("Distance from picture X", Math.sin(Math.toRadians(Math.acos(63/(translation.get(2)/ mmPerInch)))) * (translation.get(2) / mmPerInch));
+                telemetry.addData("Distance from picture Y", 63);
                 telemetry.addData("Rot (deg)", "{Roll, Pitch, Heading} = %.0f, %.0f, %.0f", rotation.firstAngle, rotation.secondAngle, rotation.thirdAngle);
             }
             else {
